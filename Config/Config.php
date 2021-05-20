@@ -1,5 +1,8 @@
 <?php
-const BASE_URL = "http://localhost/ARSET/";
+const BASE_URL = "http://localhost/SRSE3PL/";
+
+// Zona horaria
+date_default_timezone_set("America/Mexico_City");
 
 // Datos de conexió a la bdd.
 const DB_HOST = "localhost";

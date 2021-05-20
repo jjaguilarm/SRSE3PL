@@ -8,11 +8,11 @@ class Home extends Controllers
 
     public function home()
     {
-        $data["page_id"] = "1";
-        $data["page_tag"] = "Home";
-        $data["page_title"] = "Página principal";
-        $data["page_name"] = "Home";
-        $data["page_content"] = "Lorem ipsum";
+        $data["pageId"] = "1";
+        $data["pageTag"] = "Home";
+        $data["pageTitle"] = "Página principal";
+        $data["pageName"] = "Home";
+        $data["pageContent"] = "Lorem ipsum";
         $this->views->getView($this, "home", $data);
     }
     /*
