@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">ARSET</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,13 +18,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Rastrear envío</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cotiza tu envío</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Envíos
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Registrar envío</a></li>
                   <li><a class="dropdown-item" href="#">Recolectar envío</a></li>
                   <li><a class="dropdown-item" href="#">Entregar envío</a></li>
@@ -32,14 +35,33 @@
                   <li><a class="dropdown-item" href="#">Manejar incidencias</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Facturación
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                  <li><h6 class="dropdown-header">Reporte de facturación</h6></li>
+                  <li><a class="dropdown-item" href="#">Factura preliminar</a></li>
+                  <li><a class="dropdown-item" href="#">Factura definitiva</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Registrar y comprobar pago</a></li>
+                  <li><a class="dropdown-item" href="#">Reporte de estado de cuenta</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Infraestructura
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Configurar rutas de entrega</a></li>
+                  <li><a class="dropdown-item" href="#">Administrar transportistas</a></li>
+                  <li><a class="dropdown-item" href="#">Gestionar catálogo de clientes</a></li>
+                </ul>
               </li>
             </ul>
-            <form class="d-flex">
-            <button class="btn btn-outline-success dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">Infraestructura</button>
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <a class="btn btn-outline-info" role="button" href="#" data-bs-toggle="button">Iniciar sesión</a>
+            &nbsp;
+            <a class="btn btn-outline-info" role="button" href="#" data-bs-toggle="button">Registrate</a>
           </div>
         </div>
       </nav>
