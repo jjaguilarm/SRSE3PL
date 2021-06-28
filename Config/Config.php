@@ -1,5 +1,5 @@
 <?php
-const BASE_URL = "http://localhost/SRSE3PL/";
+const BASE_URL = "http://localhost/SRSE3PL";
 
 // Zona horaria
 date_default_timezone_set("America/Mexico_City");

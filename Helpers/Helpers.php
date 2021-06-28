@@ -1,5 +1,5 @@
 <?php
-function base_url()
+function baseUrl()
 {
     return BASE_URL;
 }
@@ -27,6 +27,12 @@ function dep($data)
     $format .= print_r($data);
     $format .= print_r("</pre>");
     return $format;
+}
+
+function getModal(string $modalName, $data)
+{
+    $view = "Views/Template/Modals/{$modalName}.php";
+    require_once($view);
 }
 
 function cleanStr($str)

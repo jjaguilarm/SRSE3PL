@@ -4,6 +4,7 @@ class Home extends Controllers
     public function __construct()
     {
         parent::__construct();
+        session_start();
     }
 
     public function home()
@@ -15,11 +16,4 @@ class Home extends Controllers
         $data["pageContent"] = "Lorem ipsum";
         $this->views->getView($this, "home", $data);
     }
-    /*
-    public function insertar()
-    {
-        $data = $this->model->setUser("Alberto", "25");
-        print_r($data);
-    }
-    */
 }

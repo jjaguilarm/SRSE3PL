@@ -1,0 +1,25 @@
+.reg-box {
+    position: relative;
+    width: 40%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.general-form {
+    padding: 30px;
+    border: 1px solid aqua;
+    border-radius: 10px;
+}
+
+#cambio-registro {
+    position: absolute;
+    top: -7%;
+    right: 0%;
+    text-decoration: none;
+}
+
+#cambio-registro:hover {
+    text-decoration: underline;
+}
+

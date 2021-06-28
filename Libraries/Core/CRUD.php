@@ -2,8 +2,8 @@
 class CRUD extends Conexion
 {
     private $conexion;
-    private $strQuery;
-    private $arrValues;
+    private $query;
+    private $values;
 
     public function __construct()
     {
@@ -11,23 +11,25 @@ class CRUD extends Conexion
         $this->conexion = $this->connect();
     }
 
-    public function insert(string $query, array $arrValues)
+    public function insert(string $query, array $values)
     {
-        $this->strQuery = $query;
-        $this->arrValues = $arrValues;
-        $insert = $this->conexion->prepare($this->strQuery);
-        $resInsert = $insert->execute($this->arrValues);
-        if ($resInsert)
-            $lastInsert = $this->conexion->lastInsertId();
-        else   
+        $this->query = $query;
+        $this->values = $values;
+        $insert = $this->conexion->prepare($this->query);
+        $resInsert = $insert->execute($this->values);
+        /*
+        if ($resInsert === FALSE)
             $lastInsert = 0;
-        return $lastInsert;
+        else   
+            $lastInsert = $this->conexion->lastInsertId();
+        */
+        return $resInsert;
     }
 
     public function select(string $query)
     {
-        $this->strQuery = $query;
-        $result = $this->conexion->prepare($this->strQuery);
+        $this->query = $query;
+        $result = $this->conexion->prepare($this->query);
         $result->execute();
         $data = $result->fetch(PDO::FETCH_ASSOC);
         return $data;
@@ -35,26 +37,26 @@ class CRUD extends Conexion
 
     public function selectAll(string $query)
     {
-        $this->strQuery = $query;
-        $result = $this->conexion->prepare($this->strQuery);
+        $this->query = $query;
+        $result = $this->conexion->prepare($this->query);
         $result->execute();
         $data = $result->fetchall(PDO::FETCH_ASSOC);
         return $data;
     }
 
-    public function update(string $query, array $arrValues)
+    public function update(string $query, array $values)
     {
-        $this->strQuery = $query;
-        $this->arrValues = $arrValues;
-        $update = $this->conexion->prepare($this->strQuery);
-        $resUpdate = $update->execute($arrValues);
+        $this->query = $query;
+        $this->values = $values;
+        $update = $this->conexion->prepare($this->query);
+        $resUpdate = $update->execute($values);
         return $resUpdate;
     }
 
     public function delete(string $query)
     {
-        $this->strQuery = $query;
-        $result = $this->conexion->prepare($this->strQuery);
+        $this->query = $query;
+        $result = $this->conexion->prepare($this->query);
         $result->execute();
         return $result;
     }
