@@ -1,6 +1,6 @@
 <?php
 require_once('Pais.php');
-require_once('../Libraries/nusoap/lib/nusoap.php');
+// require_once('../Libraries/nusoap/lib/nusoap.php');
 
 class Cotizacion extends Controllers
 {
